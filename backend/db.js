@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // connect with mongodb URL
-mongoose.connect("");
+mongoose.connect("mongodb+srv://sam:1234@cluster0.d6521.mongodb.net/todos");
 
 // Create the todo schema
 const todoSchema = mongoose.Schema({
