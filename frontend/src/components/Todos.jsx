@@ -1,9 +1,15 @@
-export function Todos() {
+export function Todos({ todos }) {
   return (
     <div>
-      <h2>Title - Go to gym</h2>
-      <p>Go to the gym description for the first todo</p>
-      <button>Mark as Completed</button>
+      {todos.map((todo) => {
+        return (
+          <div>
+            <h2>{todo.title}</h2>
+            <p>{todo.description}</p>
+            <button>{todo.completed ? "Done" : "Mark as Completed"}</button>
+          </div>
+        );
+      })}
     </div>
   );
 }
